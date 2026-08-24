@@ -1,0 +1,10 @@
+[build]
+  publish = "deploy-static"
+
+[functions]
+  directory = "functions"
+
+[[redirects]]
+  from = "/api/lead"
+  to = "/.netlify/functions/lead"
+  status = 200
