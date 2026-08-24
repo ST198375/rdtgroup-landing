@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>РДТ Групп — Ремонт двигателей спецтехники в Слуцке и по Беларуси</title>
+<meta name="description" content="Капитальный и текущий ремонт двигателей спецтехники: Deutz, ЯМЗ-238, Д-260, Cummins, Caterpillar, Komatsu, МТЗ, МАЗ. Выезд на объект, гарантия, короткие сроки. Слуцк и вся Беларусь.">
+<!-- ═══ АНАЛИТИКА ═══
+     Яндекс Метрика: замени NNNNNNNN на номер счётчика (метрика.яндекс.рф)
+     Google Analytics 4: замени G-XXXXXXXXXX на ID потока (analytics.google.com)
+-->
+<script type="text/javascript">
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  ym(NNNNNNNN, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<!-- ═══ КОНЕЦ АНАЛИТИКИ ═══ -->
+
+<style>
+  :root {
+    --dark: #0f172a;
+    --accent: #f59e0b;
+    --accent-dark: #d97706;
+    --text: #1e293b;
+    --muted: #64748b;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --radius: 12px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+  img { max-width: 100%; }
+
+  /* Header */
+  .header {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--white);
+    box-shadow: 0 1px 3px rgba(15,23,42,.08);
+  }
+  .header .container { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; }
+  .logo { font-size: 22px; font-weight: 800; color: var(--dark); letter-spacing: .5px; }
+  .logo span { color: var(--accent); }
+  .header-right { display: flex; align-items: center; gap: 16px; }
+  .header-phone { font-weight: 700; color: var(--dark); text-decoration: none; }
+  .btn {
+    display: inline-block; background: var(--accent); color: var(--dark);
+    font-weight: 700; padding: 12px 24px; border-radius: 8px;
+    text-decoration: none; border: none; cursor: pointer; font-size: 16px;
+    transition: background .2s;
+  }
+  .btn:hover { background: var(--accent-dark); color: var(--white); }
+  .btn-outline {
+    background: transparent; border: 2px solid var(--dark); color: var(--dark);
+  }
+  .btn-outline:hover { background: var(--dark); color: var(--white); }
+
+  /* Hero */
+  .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: var(--white); padding: 72px 0 64px; }
+  .hero h1 { font-size: 40px; line-height: 1.2; margin-bottom: 16px; }
+  .hero h1 span { color: var(--accent); }
+  .hero p.lead { font-size: 19px; color: #cbd5e1; margin-bottom: 12px; max-width: 720px; }
+  .hero .sub { color: #94a3b8; font-size: 15px; margin-bottom: 28px; }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .hero-note { margin-top: 14px; font-size: 13px; color: #94a3b8; }
+
+  /* Trust bar */
+  .trust { background: var(--white); border-bottom: 1px solid #e2e8f0; }
+  .trust .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 18px 20px; }
+  .trust-item { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14px; color: var(--dark); }
+  .trust-item .ic { color: var(--accent); font-size: 20px; }
+
+  /* Sections */
+  section { padding: 64px 0; }
+  .section-title { font-size: 30px; color: var(--dark); margin-bottom: 12px; }
+  .section-sub { color: var(--muted); margin-bottom: 36px; max-width: 680px; }
+
+  /* Problems */
+  .problems { background: var(--bg-light); }
+  .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--white); border: 1px solid #e2e8f0; border-radius: var(--radius);
+    padding: 22px; transition: box-shadow .2s;
+  }
+  .card:hover { box-shadow: 0 8px 24px rgba(15,23,42,.08); }
+  .card h3 { font-size: 17px; margin-bottom: 8px; color: var(--dark); }
+  .card p { color: var(--muted); font-size: 14px; }
+
+  /* Services */
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .service-item { display: flex; gap: 14px; align-items: flex-start; }
+  .service-item .num {
+    background: var(--accent); color: var(--dark); font-weight: 800;
+    width: 34px; height: 34px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .service-item h3 { font-size: 17px; color: var(--dark); }
+  .service-item p { font-size: 14px; color: var(--muted); }
+
+  /* Why us */
+  .why { background: var(--bg-light); }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .stat {
+    background: var(--white); border-radius: var(--radius); border: 1px solid #e2e8f0;
+    text-align: center; padding: 24px 16px;
+  }
+  .stat .value { font-size: 32px; font-weight: 800; color: var(--accent); }
+  .stat .label { color: var(--muted); font-size: 14px; margin-top: 6px; }
+
+  /* Process */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; counter-reset: step; }
+  .step { position: relative; background: var(--white); border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 22px 22px 22px 56px; }
+  .step::before {
+    counter-increment: step; content: counter(step);
+    position: absolute; left: 16px; top: 20px;
+    font-size: 26px; font-weight: 800; color: var(--accent);
+  }
+  .step h3 { font-size: 16px; color: var(--dark); margin-bottom: 6px; }
+  .step p { font-size: 14px; color: var(--muted); }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid #e2e8f0; padding: 18px 0; }
+  .faq-item h3 { font-size: 17px; color: var(--dark); cursor: pointer; }
+  .faq-item p { margin-top: 8px; color: var(--muted); font-size: 15px; }
+
+  /* CTA + form */
+  .cta { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: var(--dark); }
+  .cta h2 { font-size: 32px; margin-bottom: 10px; }
+  .cta p { font-size: 17px; margin-bottom: 24px; max-width: 640px; }
+  .form { display: flex; flex-wrap: wrap; gap: 12px; max-width: 640px; }
+  .form input, .form textarea {
+    flex: 1 1 200px; padding: 14px 16px; border: none; border-radius: 8px;
+    font-size: 16px; font-family: inherit;
+  }
+  .form textarea { flex-basis: 100%; resize: vertical; }
+  .form .btn { background: var(--dark); color: var(--white); }
+  .form .btn:hover { background: #1e293b; }
+
+  /* Contacts */
+  .contacts { background: var(--bg-light); }
+  .contacts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .contact-item { background: var(--white); border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 20px; }
+  .contact-item h3 { font-size: 15px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .contact-item a, .contact-item div { color: var(--dark); font-size: 18px; font-weight: 700; text-decoration: none; }
+
+  footer { background: var(--dark); color: #94a3b8; padding: 28px 0; font-size: 14px; }
+  footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+  @media (max-width: 768px) {
+    .hero { padding: 48px 0; }
+    .hero h1 { font-size: 30px; }
+    .section-title { font-size: 24px; }
+    .header-phone { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="logo">РДТ <span>Групп</span></div>
+    <div class="header-right">
+      <a class="header-phone" href="tel:+375447433347">+375 (44) 743-33-47</a>
+      <a class="btn" href="#contact">Заказать звонок</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Ремонт двигателей спецтехники<br>в <span>Слуцке</span> и по всей Беларуси</h1>
+    <p class="lead">Вернём технику в строй быстро: диагностика за 1 день, ремонт с гарантией, выезд на объект.</p>
+    <p class="sub">Deutz · ЯМЗ-238 · Д-260 · Cummins · Caterpillar · Komatsu · МТЗ · МАЗ · Perkins</p>
+    <div class="hero-cta">
+      <a class="btn" href="#contact">Бесплатная консультация</a>
+      <a class="btn btn-outline" href="#services">Наши услуги</a>
+    </div>
+    <div class="hero-note">Перезвоним за 15 минут в рабочее время · Работаем с юрлицами и физлицами</div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="container">
+    <div class="trust-item"><span class="ic">✓</span> Гарантия на работы</div>
+    <div class="trust-item"><span class="ic">✓</span> Выезд на объект</div>
+    <div class="trust-item"><span class="ic">✓</span> Соблюдаем сроки</div>
+    <div class="trust-item"><span class="ic">✓</span> Честная дефектовка</div>
+  </div>
+</div>
+
+<section class="problems">
+  <div class="container">
+    <h2 class="section-title">Знакомая ситуация?</h2>
+    <div class="problems-grid">
+      <div class="card">
+        <h3>Техника встала в самый разгар работ</h3>
+        <p>Каждый день простоя — потерянные деньги. Мы работаем быстро и держим вас в курсе на каждом этапе.</p>
+      </div>
+      <div class="card">
+        <h3>«Гаражные» мастера без гарантий</h3>
+        <p>После такого ремонта двигатель снова стучит через месяц. Мы даём гарантию на работы и отвечаем за результат.</p>
+      </div>
+      <div class="card">
+        <h3>Столичные сервисы далеко и дорого</h3>
+        <p>Везти технику за 150 км в Минск — долго и затратно. Мы рядом: Слуцк, Солигорск, весь район и выезд по области.</p>
+      </div>
+      <div class="card">
+        <h3>Не хочется менять двигатель на новый</h3>
+        <p>Капремонт часто в разы дешевле замены. Восстановим ваш двигатель с заменой изношенных деталей — с гарантией.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Что мы делаем</h2>
+    <p class="section-sub">Полный цикл работ по двигателям спецтехники — от диагностики до капитального ремонта.</p>
+    <div class="services-grid">
+      <div class="service-item"><div class="num">1</div><div><h3>Диагностика двигателя</h3><p>Компьютерная и механическая диагностика, точная дефектовка до начала работ.</p></div></div>
+      <div class="service-item"><div class="num">2</div><div><h3>Текущий ремонт</h3><p>Устранение течей, замена изношенных узлов, ГРМ, прокладок, уплотнений.</p></div></div>
+      <div class="service-item"><div class="num">3</div><div><h3>Капитальный ремонт</h3><p>Полная переборка: ЦПГ, коленвал, ГБЦ, вкладыши, распредвал. С дефектовкой и гарантией.</p></div></div>
+      <div class="service-item"><div class="num">4</div><div><h3>Ремонт топливной аппаратуры</h3><p>ТНВД, форсунки, система Common Rail — диагностика и восстановление.</p></div></div>
+      <div class="service-item"><div class="num">5</div><div><h3>Ремонт ГБЦ и турбонаддува</h3><p>Восстановление головок блока, турбин, замена комплектующих.</p></div></div>
+      <div class="service-item"><div class="num">6</div><div><h3>Выездной ремонт на объекте</h3><p>Аварийный выезд, ремонт без доставки техники в сервис. Слуцк и область.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container">
+    <h2 class="section-title">Почему РДТ Групп</h2>
+    <p class="section-sub">Мы специализируемся именно на двигателях — это не «мастер на все руки», а глубокая экспертиза.</p>
+    <div class="why-grid">
+      <div class="stat"><div class="value">1 дн.</div><div class="label">диагностика и предварительная оценка</div></div>
+      <div class="stat"><div class="value">100%</div><div class="label">гарантия на выполненные работы</div></div>
+      <div class="stat"><div class="value">24/7</div><div class="label">приём заявок, выезд по договорённости</div></div>
+      <div class="stat"><div class="value">5–15</div><div class="label">рабочих дней — типовой срок капремонта</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">Как мы работаем</h2>
+    <div class="steps">
+      <div class="step"><h3>Заявка</h3><p>Звонок или заявка с сайта. Уточняем модель, симптомы, где техника.</p></div>
+      <div class="step"><h3>Диагностика</h3><p>Осмотр, диагностика, честная дефектовка и смета до начала работ.</p></div>
+      <div class="step"><h3>Согласование</h3><p>Сроки и стоимость фиксируем письменно. Никаких «сюрпризов» по цене.</p></div>
+      <div class="step"><h3>Ремонт</h3><p>Выполняем работы, держим в курсе, тестируем двигатель.</p></div>
+      <div class="step"><h3>Сдача + гарантия</h3><p>Передаём технику, выдаём гарантию. Остаёмся на связи.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="container">
+    <h2>Получите расчёт стоимости ремонта</h2>
+    <p>Опишите проблему — перезвоним, сориентируем по цене и срокам. Бесплатно и ни к чему не обязывает.</p>
+    <form class="form" id="lead-form" action="#" method="post">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="tel" name="phone" placeholder="Телефон" required>
+      <textarea name="message" rows="3" placeholder="Модель техники и проблема (например: ЯМЗ-238, стучит, дымит)"></textarea>
+      <button type="submit" class="btn">Получить расчёт</button>
+    </form>
+    <p id="form-status" style="margin-top:12px;font-size:15px;font-weight:600;min-height:20px;"></p>
+    <p style="margin-top:14px;font-size:14px;opacity:.85">Или позвоните: <a href="tel:+375447433347" style="color:var(--dark);font-weight:800;text-decoration:none">+375 (44) 743-33-47</a> · <a href="tel:+375256542361" style="color:var(--dark);font-weight:800;text-decoration:none">+375 (25) 654-23-61</a></p>
+  </div>
+</section>
+
+<section class="contacts">
+  <div class="container">
+    <h2 class="section-title">Контакты</h2>
+    <div class="contacts-grid">
+      <div class="contact-item"><h3>Телефон</h3><a href="tel:+375447433347">+375 (44) 743-33-47</a><br><a href="tel:+375256542361">+375 (25) 654-23-61</a></div>
+      <div class="contact-item"><h3>E-mail</h3><a href="mailto:info@rdtgroup.online">info@rdtgroup.online</a></div>
+      <div class="contact-item"><h3>Адрес сервиса</h3><div>г. Слуцк, ул. ... (уточнить)</div></div>
+      <div class="contact-item"><h3>Режим работы</h3><div>Пн–Сб: 8:00–19:00, заявки 24/7</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© 2026 РДТ Групп — ремонт двигателей спецтехники. Слуцк, Беларусь.</div>
+    <div>ЯМЗ · Cummins · Caterpillar · Komatsu · Deutz · МТЗ · МАЗ</div>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('lead-form');
+  const statusEl = document.getElementById('form-status');
+  const BOT_LINK = 'https://t.me/rdt_group_bot';
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = form.elements.name.value.trim();
+    const phone = form.elements.phone.value.trim();
+    const message = form.elements.message.value.trim();
+    statusEl.textContent = '⏳ Отправляем...';
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, message })
+      });
+      const j = await res.json();
+      if (j.ok) {
+        statusEl.textContent = '✅ Заявка отправлена! Перезвоним в ближайшее время.';
+        form.reset();
+        // Цель для Яндекс Метрики и GA4
+        if (typeof ym !== 'undefined') { ym(NNNNNNNN, 'reachGoal', 'lead'); }
+        if (typeof gtag !== 'undefined') { gtag('event', 'lead', { 'event_category': 'form' }); }
+      } else {
+        fallbackToTelegram(name, phone, message);
+      }
+    } catch (err) {
+      fallbackToTelegram(name, phone, message);
+    }
+  });
+
+  // Запасной путь (бесплатный статический хостинг без сервера):
+  // открываем Telegram с готовым текстом заявки
+  function fallbackToTelegram(name, phone, message) {
+    const text = '📩 Новая заявка с лендинга РДТ Групп%0A' +
+      '👤 Имя: ' + encodeURIComponent(name) + '%0A' +
+      '📞 Телефон: ' + encodeURIComponent(phone) + '%0A' +
+      '📝 Сообщение: ' + encodeURIComponent(message || '—');
+    window.open(BOT_LINK + '?text=' + text, '_blank');
+    statusEl.textContent = '📲 Заявка почти готова! Откройте Telegram и нажмите «Отправить» в чате с ботом.';
+  }
+</script>
+
+</body>
+</html>
