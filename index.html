@@ -311,14 +311,24 @@
     const phone = form.elements.phone.value.trim();
     const message = form.elements.message.value.trim();
     statusEl.textContent = '⏳ Отправляем...';
-    try {
-      const res = await fetch('/api/lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, phone, message })
-      });
-      const j = await res.json();
-      if (j.ok) {
+    // Основной путь: свой /api/lead (Netlify), запасной — API Netlify-сайта
+    // (для GitHub Pages) и последний резерв — Telegram.
+    const endpoints = ['/api/lead', 'https://rdtgroup-landing.netlify.app/api/lead'];
+    let ok = false;
+    for (const ep of endpoints) {
+      try {
+        const res = await fetch(ep, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, phone, message })
+        });
+        if (res.ok) {
+          const j = await res.json().catch(() => ({}));
+          if (j.ok !== false) { ok = true; break; }
+        }
+      } catch (e) { /* пробуем следующий endpoint */ }
+    }
+    if (ok) {
         statusEl.textContent = '✅ Заявка отправлена! Перезвоним в ближайшее время.';
         form.reset();
         // Цель для Яндекс Метрики и GA4
@@ -327,9 +337,6 @@
       } else {
         fallbackToTelegram(name, phone, message);
       }
-    } catch (err) {
-      fallbackToTelegram(name, phone, message);
-    }
   });
 
   // Запасной путь (бесплатный статический хостинг без сервера):
